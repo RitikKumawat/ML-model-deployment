@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRice Prediction BMW</title>
+</head>
+<body>
+    <h1>Price Pedictor</h1>
+    {% if result%}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="POST" action="/predict">
+        <label>Year</label><br>
+        <input type="text" name="year" ><br><br>
+
+        <label>MPG</label><br>
+        <input type="text" name="mpg" ><br><br>
+
+        <label>Engine Size</label><br>
+        <input type="text" name="EngineSize" ><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+</body>
+</html>
